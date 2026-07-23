@@ -1,6 +1,6 @@
 
 
-- 👋 Hi, I’m @oso95
+- 👋 Hi, I’m Peter
 - 👀 I’m interested in programming
 - 📫 How to reach me cyw@cywang.me
 
