@@ -1,0 +1,8 @@
+{
+  "general": {
+    "add_to_cart": "Agregar al carrito",
+    "sold_out": "Agotado",
+    "added": "¡Agregado al carrito!",
+    "error": "No pudimos agregar el producto. Intenta de nuevo."
+  }
+}

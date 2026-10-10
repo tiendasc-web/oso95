@@ -1,0 +1,168 @@
+{
+  "vendor": "Pasito Feliz",
+  "image_base": "https://raw.githubusercontent.com/tiendasc-web/oso95/refs/heads/claude/tienda-bebes-shopify/productos/imagenes/",
+  "products": [
+    {
+      "handle": "protector-cabeza-bebe-abejita",
+      "title": "Protector de Cabeza para Bebé Abejita – Mochila Anticaídas",
+      "type": "Protector de cabeza",
+      "tags": ["seguridad", "primeros-pasos", "mas-vendidos", "estrella"],
+      "status": "active",
+      "price": "64900",
+      "sku": "SU00111427",
+      "grams": 250,
+      "images": [{ "file": "protector-cabeza-abejita-mariposa.jpg", "alt": "Protector de cabeza para bebé en forma de abejita rosada con alas lilas" }],
+      "seo_title": "Protector de Cabeza para Bebé Abejita | Pasito Feliz",
+      "seo_description": "Mochila protectora anticaídas para bebé: cojín suave y transpirable que amortigua golpes en cabeza y espalda. Envío gratis y pago contra entrega.",
+      "body": "<p><strong>Cada caída, un poquito más suave.</strong> Nuestra Abejita acompaña a tu bebé mientras aprende a sentarse, gatear y dar sus primeros pasos, amortiguando los golpes en la cabeza y la espalda.</p><ul><li>🐝 <strong>Cojín acolchado en forma de dona</strong> que protege la parte posterior de la cabeza.</li><li>🦋 <strong>Alitas acolchadas</strong> que cubren la espalda baja.</li><li>🌬️ <strong>Malla 3D transpirable</strong>: ligera y fresca, ideal para clima cálido.</li><li>🎒 <strong>Correas elásticas ajustables</strong> que se ponen como una mochila.</li><li>🧼 <strong>Fácil de lavar</strong> a mano.</li></ul><p><strong>Edad recomendada:</strong> 4 a 24 meses.</p><p><strong>Incluye:</strong> 1 protector de cabeza con correas.</p><p><em>Este accesorio amortigua impactos, pero no reemplaza la supervisión de un adulto.</em></p>"
+    },
+    {
+      "handle": "protector-cabeza-bebe-osito",
+      "title": "Protector de Cabeza para Bebé Osito",
+      "type": "Protector de cabeza",
+      "tags": ["seguridad", "primeros-pasos", "mas-vendidos"],
+      "status": "draft",
+      "price": "64900",
+      "sku": "PENDIENTE-OSITO",
+      "grams": 250,
+      "images": [],
+      "body": "<p>La misma protección suave de nuestra Abejita, en versión osito. Cojín acolchado, malla transpirable y correas ajustables. Edad recomendada: 4 a 24 meses.</p>"
+    },
+    {
+      "handle": "protector-cabeza-bebe-mariquita",
+      "title": "Protector de Cabeza para Bebé Mariquita",
+      "type": "Protector de cabeza",
+      "tags": ["seguridad", "primeros-pasos"],
+      "status": "draft",
+      "price": "64900",
+      "sku": "PENDIENTE-MARIQUITA",
+      "grams": 250,
+      "images": [],
+      "body": "<p>Protector de cabeza anticaídas en diseño mariquita. Cojín acolchado, malla transpirable y correas ajustables. Edad recomendada: 4 a 24 meses.</p>"
+    },
+    {
+      "handle": "rodilleras-gateo-bebe",
+      "title": "Rodilleras Antideslizantes para Gateo (Pack x3)",
+      "type": "Rodilleras",
+      "tags": ["seguridad", "primeros-pasos", "mas-vendidos"],
+      "status": "draft",
+      "price": "34900",
+      "sku": "PENDIENTE-RODILLERAS",
+      "grams": 80,
+      "images": [],
+      "body": "<p>Rodilleras acolchadas con puntos antideslizantes que protegen las rodillas de tu bebé mientras gatea en cualquier superficie. Algodón suave y elástico. Pack x3.</p>"
+    },
+    {
+      "handle": "casco-antigolpes-bebe",
+      "title": "Casco Antigolpes Ajustable para Bebé",
+      "type": "Casco",
+      "tags": ["seguridad", "primeros-pasos"],
+      "status": "draft",
+      "price": "49900",
+      "sku": "PENDIENTE-CASCO",
+      "grams": 150,
+      "images": [],
+      "body": "<p>Casco ligero y acolchado con ventilación para proteger frente y laterales de la cabeza mientras tu bebé aprende a caminar. Talla ajustable.</p>"
+    },
+    {
+      "handle": "arnes-caminador-bebe",
+      "title": "Arnés Caminador para Bebé",
+      "type": "Arnés caminador",
+      "tags": ["primeros-pasos"],
+      "status": "draft",
+      "price": "54900",
+      "sku": "PENDIENTE-ARNES",
+      "grams": 300,
+      "images": [],
+      "body": "<p>Ayuda a tu bebé a dar sus primeros pasos sin que tengas que agacharte. Chaleco acolchado y asas ajustables a tu altura.</p>"
+    },
+    {
+      "handle": "protectores-esquinas-silicona",
+      "title": "Protectores de Esquinas de Silicona (Pack x8)",
+      "type": "Seguridad hogar",
+      "tags": ["seguridad"],
+      "status": "draft",
+      "price": "24900",
+      "sku": "PENDIENTE-ESQUINAS",
+      "grams": 100,
+      "images": [],
+      "body": "<p>Protectores suaves de silicona para esquinas de mesas y muebles. Adhesivo fuerte que no deja residuos. Pack x8.</p>"
+    },
+    {
+      "handle": "seguros-cajones-bebe",
+      "title": "Seguros para Cajones y Gabinetes (Pack x10)",
+      "type": "Seguridad hogar",
+      "tags": ["seguridad"],
+      "status": "draft",
+      "price": "29900",
+      "sku": "PENDIENTE-SEGUROS",
+      "grams": 120,
+      "images": [],
+      "body": "<p>Seguros adhesivos para cajones, gabinetes y neveras. Instalación sin taladro. Pack x10.</p>"
+    },
+    {
+      "handle": "lampara-proyector-estrellas-bebe",
+      "title": "Lámpara Proyector de Estrellas con Música",
+      "type": "Lámpara",
+      "tags": ["hora-de-dormir", "mas-vendidos"],
+      "status": "draft",
+      "price": "69900",
+      "sku": "PENDIENTE-LAMPARA",
+      "grams": 400,
+      "images": [],
+      "body": "<p>Proyecta un cielo de estrellas en la habitación y reproduce canciones de cuna para ayudar a tu bebé a dormir. Apagado automático.</p>"
+    },
+    {
+      "handle": "saco-dormir-bebe",
+      "title": "Saco de Dormir de Algodón para Bebé",
+      "type": "Saco de dormir",
+      "tags": ["hora-de-dormir"],
+      "status": "draft",
+      "price": "59900",
+      "sku": "PENDIENTE-SACO",
+      "grams": 300,
+      "images": [],
+      "body": "<p>Saco de dormir suave y transpirable que mantiene a tu bebé abrigado sin cobijas sueltas. 100% algodón.</p>"
+    },
+    {
+      "handle": "set-vajilla-silicona-bebe",
+      "title": "Set de Alimentación de Silicona con Ventosa",
+      "type": "Alimentación",
+      "tags": ["alimentacion", "mas-vendidos"],
+      "status": "draft",
+      "price": "54900",
+      "sku": "PENDIENTE-VAJILLA",
+      "grams": 450,
+      "images": [],
+      "body": "<p>Plato con ventosa, bowl, vaso y cuchara de silicona grado alimenticio, libre de BPA. Ideal para la alimentación complementaria.</p>"
+    },
+    {
+      "handle": "babero-silicona-bebe",
+      "title": "Babero de Silicona con Bolsillo",
+      "type": "Alimentación",
+      "tags": ["alimentacion"],
+      "status": "draft",
+      "price": "24900",
+      "sku": "PENDIENTE-BABERO",
+      "grams": 90,
+      "images": [],
+      "body": "<p>Babero impermeable con bolsillo recolector. Se lava en segundos. Silicona libre de BPA.</p>"
+    }
+  ],
+  "collections": [
+    { "handle": "mas-vendidos", "title": "Lo más vendido", "tag": "mas-vendidos", "description": "Los favoritos de las familias Pasito Feliz." },
+    { "handle": "seguridad-bebe", "title": "Seguridad", "tag": "seguridad", "description": "Protección suave para cada etapa de exploración." },
+    { "handle": "primeros-pasos", "title": "Primeros pasos", "tag": "primeros-pasos", "description": "Todo lo que necesitas cuando tu bebé empieza a gatear y caminar." },
+    { "handle": "hora-de-dormir", "title": "Hora de dormir", "tag": "hora-de-dormir", "description": "Noches tranquilas para el bebé (y para ti)." },
+    { "handle": "alimentacion", "title": "Alimentación", "tag": "alimentacion", "description": "Accesorios prácticos para la alimentación complementaria." }
+  ],
+  "pages": [
+    { "handle": "nosotros", "title": "Nuestra historia", "file": "nosotros.html" },
+    { "handle": "envios", "title": "Envíos y pago contra entrega", "file": "envios.html" },
+    { "handle": "cambios-y-devoluciones", "title": "Cambios y devoluciones", "file": "cambios.html" },
+    { "handle": "contacto", "title": "Contacto", "file": "contacto.html" }
+  ],
+  "discounts": [
+    { "code": "BIENVENIDA10", "title": "Bienvenida 10%", "percentage": 0.10 }
+  ]
+}

@@ -1,0 +1,58 @@
+<footer class="footer">
+  <div class="container footer__grid">
+    <div class="footer__brand">
+      <p class="logo-text"><span aria-hidden="true">🐝</span> {{ shop.name }}</p>
+      <p>{{ section.settings.about }}</p>
+      <ul class="footer__social">
+        {%- if settings.social_instagram != blank -%}<li><a href="{{ settings.social_instagram }}" target="_blank" rel="noopener">Instagram</a></li>{%- endif -%}
+        {%- if settings.social_facebook != blank -%}<li><a href="{{ settings.social_facebook }}" target="_blank" rel="noopener">Facebook</a></li>{%- endif -%}
+        {%- if settings.social_tiktok != blank -%}<li><a href="{{ settings.social_tiktok }}" target="_blank" rel="noopener">TikTok</a></li>{%- endif -%}
+      </ul>
+    </div>
+
+    <div>
+      <h2 class="footer__heading">{{ section.settings.menu.title | default: 'Ayuda' }}</h2>
+      <ul class="footer__links">
+        {%- for link in section.settings.menu.links -%}
+          <li><a href="{{ link.url }}">{{ link.title }}</a></li>
+        {%- endfor -%}
+      </ul>
+    </div>
+
+    <div>
+      <h2 class="footer__heading">{{ section.settings.newsletter_title }}</h2>
+      <p>{{ section.settings.newsletter_text }}</p>
+      {%- form 'customer', class: 'newsletter' -%}
+        <input type="hidden" name="contact[tags]" value="newsletter">
+        {%- if form.posted_successfully? -%}
+          <p class="form-success">¡Gracias! Revisa tu correo para tu cupón de bienvenida 💜</p>
+        {%- else -%}
+          <label class="visually-hidden" for="NewsletterEmail">Correo electrónico</label>
+          <input id="NewsletterEmail" type="email" name="contact[email]" placeholder="tu@correo.com" required autocomplete="email">
+          <button type="submit" class="button">Suscribirme</button>
+        {%- endif -%}
+      {%- endform -%}
+    </div>
+  </div>
+
+  <div class="container footer__bottom">
+    <p>&copy; {{ 'now' | date: '%Y' }} {{ shop.name }}. Hecho con amor para mamás y papás.</p>
+    <ul class="payment-icons">
+      {%- for type in shop.enabled_payment_types -%}
+        <li>{{ type | payment_type_svg_tag: class: 'payment-icon' }}</li>
+      {%- endfor -%}
+    </ul>
+  </div>
+</footer>
+
+{% schema %}
+{
+  "name": "Pie de página",
+  "settings": [
+    { "type": "textarea", "id": "about", "label": "Sobre la marca", "default": "Productos seguros, suaves y adorables para acompañar cada etapa de tu bebé. Pago contra entrega y envío a todo el país." },
+    { "type": "link_list", "id": "menu", "label": "Menú", "default": "footer" },
+    { "type": "text", "id": "newsletter_title", "label": "Título boletín", "default": "Club Pasito Feliz" },
+    { "type": "text", "id": "newsletter_text", "label": "Texto boletín", "default": "Suscríbete y recibe 10% OFF en tu primera compra." }
+  ]
+}
+{% endschema %}

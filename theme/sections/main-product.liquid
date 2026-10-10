@@ -1,0 +1,33 @@
+<section class="section">
+  <div class="container">
+    {% render 'product-info', product: product, section: section, show_description: true %}
+  </div>
+</section>
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "name": {{ product.title | json }},
+    "description": {{ product.description | strip_html | json }},
+    {%- if product.featured_media -%}"image": {{ product.featured_media | image_url: width: 1200 | prepend: 'https:' | json }},{%- endif -%}
+    "brand": { "@type": "Brand", "name": {{ shop.name | json }} },
+    "sku": {{ product.selected_or_first_available_variant.sku | json }},
+    "offers": {
+      "@type": "Offer",
+      "url": {{ request.origin | append: product.url | json }},
+      "priceCurrency": {{ cart.currency.iso_code | json }},
+      "price": {{ product.selected_or_first_available_variant.price | divided_by: 100.0 | json }},
+      "availability": "https://schema.org/{% if product.available %}InStock{% else %}OutOfStock{% endif %}"
+    }
+  }
+</script>
+
+{% schema %}
+{
+  "name": "Producto",
+  "settings": [
+    { "type": "text", "id": "eyebrow", "label": "Texto superior", "default": "Pasito Feliz" }
+  ]
+}
+{% endschema %}

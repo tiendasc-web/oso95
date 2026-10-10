@@ -1,0 +1,43 @@
+<section class="section">
+  <div class="container">
+    {%- if section.settings.heading != blank -%}<h2 class="section__title">{{ section.settings.heading }}</h2>{%- endif -%}
+    <div class="benefits">
+      {%- for block in section.blocks -%}
+        <div class="benefit" {{ block.shopify_attributes }}>
+          <span class="benefit__icon">{% render 'icon', name: block.settings.icon %}</span>
+          <h3>{{ block.settings.title }}</h3>
+          <p>{{ block.settings.text }}</p>
+        </div>
+      {%- endfor -%}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Beneficios",
+  "settings": [
+    { "type": "text", "id": "heading", "label": "Título", "default": "¿Por qué Pasito Feliz?" }
+  ],
+  "max_blocks": 6,
+  "blocks": [
+    {
+      "type": "benefit",
+      "name": "Beneficio",
+      "settings": [
+        { "type": "select", "id": "icon", "label": "Icono", "default": "heart", "options": [
+          { "value": "truck", "label": "Camión" },
+          { "value": "cash", "label": "Dinero" },
+          { "value": "shield", "label": "Escudo" },
+          { "value": "heart", "label": "Corazón" },
+          { "value": "feather", "label": "Pluma" },
+          { "value": "refresh", "label": "Cambio" }
+        ] },
+        { "type": "text", "id": "title", "label": "Título", "default": "Beneficio" },
+        { "type": "textarea", "id": "text", "label": "Texto", "default": "Describe el beneficio." }
+      ]
+    }
+  ],
+  "presets": [{ "name": "Beneficios", "blocks": [{ "type": "benefit" }, { "type": "benefit" }, { "type": "benefit" }] }]
+}
+{% endschema %}

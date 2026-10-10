@@ -1,0 +1,36 @@
+<section class="section section--soft">
+  <div class="container">
+    <h2 class="section__title">{{ section.settings.heading }}</h2>
+    <div class="collections">
+      {%- for block in section.blocks -%}
+        {%- assign c = block.settings.collection -%}
+        <a class="collection-tile" href="{% if c != blank %}{{ c.url }}{% else %}{{ routes.collections_url }}{% endif %}" {{ block.shopify_attributes }}>
+          <span class="collection-tile__emoji" aria-hidden="true">{{ block.settings.emoji }}</span>
+          <span class="collection-tile__title">{% if block.settings.title != blank %}{{ block.settings.title }}{% elsif c != blank %}{{ c.title }}{% else %}Colección{% endif %}</span>
+        </a>
+      {%- endfor -%}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Lista de colecciones",
+  "settings": [
+    { "type": "text", "id": "heading", "label": "Título", "default": "Compra por categoría" }
+  ],
+  "max_blocks": 8,
+  "blocks": [
+    {
+      "type": "collection",
+      "name": "Colección",
+      "settings": [
+        { "type": "collection", "id": "collection", "label": "Colección" },
+        { "type": "text", "id": "title", "label": "Título (opcional)" },
+        { "type": "text", "id": "emoji", "label": "Emoji", "default": "🍼" }
+      ]
+    }
+  ],
+  "presets": [{ "name": "Lista de colecciones", "blocks": [{ "type": "collection" }, { "type": "collection" }, { "type": "collection" }] }]
+}
+{% endschema %}

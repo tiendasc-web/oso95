@@ -1,0 +1,29 @@
+{%- if section.blocks.size > 0 -%}
+  <div class="announcement" role="region" aria-label="Anuncios">
+    <div class="announcement__track" data-rotator>
+      {%- for block in section.blocks -%}
+        <p class="announcement__item{% if forloop.first %} is-active{% endif %}" {{ block.shopify_attributes }}>
+          {%- if block.settings.link != blank -%}<a href="{{ block.settings.link }}">{{ block.settings.text }}</a>{%- else -%}{{ block.settings.text }}{%- endif -%}
+        </p>
+      {%- endfor -%}
+    </div>
+  </div>
+{%- endif -%}
+
+{% schema %}
+{
+  "name": "Barra de anuncios",
+  "max_blocks": 5,
+  "blocks": [
+    {
+      "type": "announcement",
+      "name": "Anuncio",
+      "settings": [
+        { "type": "text", "id": "text", "label": "Texto", "default": "Envío GRATIS a todo el país" },
+        { "type": "url", "id": "link", "label": "Enlace" }
+      ]
+    }
+  ],
+  "presets": [{ "name": "Barra de anuncios", "blocks": [{ "type": "announcement" }] }]
+}
+{% endschema %}

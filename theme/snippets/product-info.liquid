@@ -1,0 +1,81 @@
+{%- comment -%}
+  Product gallery + buy box shared by main-product and featured-product.
+  Accepts: product (required), section (required), show_description (boolean)
+{%- endcomment -%}
+{%- assign current_variant = product.selected_or_first_available_variant -%}
+<div class="product" data-product data-section="{{ section.id }}">
+  <div class="product__gallery">
+    <div class="product__main-media">
+      {%- if product.featured_media -%}
+        {{ product.featured_media | image_url: width: 1100 | image_tag: widths: '450, 700, 900, 1100', sizes: '(min-width: 990px) 50vw, 100vw', alt: product.featured_media.alt | default: product.title, data-main-image: '', loading: 'eager' }}
+      {%- else -%}
+        {{ 'product-1' | placeholder_svg_tag: 'placeholder' }}
+      {%- endif -%}
+    </div>
+    {%- if product.media.size > 1 -%}
+      <ul class="product__thumbs">
+        {%- for media in product.media -%}
+          {%- if media.media_type == 'image' -%}
+            <li>
+              <button type="button" class="product__thumb" data-thumb="{{ media | image_url: width: 1100 }}" aria-label="Ver imagen {{ forloop.index }}">
+                {{ media | image_url: width: 160 | image_tag: loading: 'lazy', alt: media.alt | default: product.title }}
+              </button>
+            </li>
+          {%- endif -%}
+        {%- endfor -%}
+      </ul>
+    {%- endif -%}
+  </div>
+
+  <div class="product__info">
+    {%- if section.settings.eyebrow != blank -%}<p class="eyebrow">{{ section.settings.eyebrow }}</p>{%- endif -%}
+    <h1 class="product__title">{{ product.title }}</h1>
+    <p class="rating" aria-label="Valoración 4.9 de 5">
+      {%- for i in (1..5) -%}{% render 'icon', name: 'star' %}{%- endfor -%}
+      <span>4.9 · Amado por mamás y papás</span>
+    </p>
+    <div data-price>{% render 'price', product: product %}</div>
+
+    {%- form 'product', product, class: 'product-form', data-product-form: '' -%}
+      <input type="hidden" name="id" value="{{ current_variant.id }}" data-variant-id>
+      {%- unless product.has_only_default_variant -%}
+        {%- for option in product.options_with_values -%}
+          <fieldset class="option">
+            <legend>{{ option.name }}: <strong data-option-label="{{ forloop.index0 }}">{{ option.selected_value }}</strong></legend>
+            <div class="option__values">
+              {%- for value in option.values -%}
+                <label class="pill">
+                  <input type="radio" name="option-{{ forloop.parentloop.index0 }}" value="{{ value | escape }}" data-option-index="{{ forloop.parentloop.index0 }}" {% if option.selected_value == value %}checked{% endif %}>
+                  <span>{{ value }}</span>
+                </label>
+              {%- endfor -%}
+            </div>
+          </fieldset>
+        {%- endfor -%}
+        <script type="application/json" data-variants>
+          {{ product.variants | json }}
+        </script>
+      {%- endunless -%}
+
+      <div class="product-form__row">
+        <label class="visually-hidden" for="Qty-{{ section.id }}">Cantidad</label>
+        <input id="Qty-{{ section.id }}" class="qty" type="number" name="quantity" value="1" min="1">
+        <button type="submit" class="button button--full" data-add-button {% unless current_variant.available %}disabled{% endunless %}>
+          {%- if current_variant.available -%}Agregar al carrito{%- else -%}Agotado{%- endif -%}
+        </button>
+      </div>
+      {{ form | payment_button }}
+      <p class="form-message" data-form-message role="status" aria-live="polite"></p>
+    {%- endform -%}
+
+    <ul class="trust-list">
+      <li>{% render 'icon', name: 'truck' %} {{ settings.free_shipping_text }}</li>
+      {%- if settings.show_cod_badge -%}<li>{% render 'icon', name: 'cash' %} Pago contra entrega</li>{%- endif -%}
+      <li>{% render 'icon', name: 'refresh' %} Cambios fáciles en 30 días</li>
+    </ul>
+
+    {%- if show_description and product.description != blank -%}
+      <div class="rte product__description">{{ product.description }}</div>
+    {%- endif -%}
+  </div>
+</div>

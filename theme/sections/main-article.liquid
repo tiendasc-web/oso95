@@ -1,0 +1,17 @@
+<article class="section">
+  <div class="container container--narrow">
+    <header class="page-head">
+      <h1>{{ article.title }}</h1>
+      <p class="muted">{{ article.published_at | date: '%d/%m/%Y' }}</p>
+    </header>
+    {%- if article.image -%}
+      {{ article.image | image_url: width: 1100 | image_tag: alt: article.title, class: 'article__image' }}
+    {%- endif -%}
+    <div class="rte">{{ article.content }}</div>
+    <p><a class="link" href="{{ blog.url }}">← Volver al blog</a></p>
+  </div>
+</article>
+
+{% schema %}
+{ "name": "Artículo" }
+{% endschema %}

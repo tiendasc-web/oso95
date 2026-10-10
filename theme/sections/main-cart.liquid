@@ -1,0 +1,49 @@
+<section class="section">
+  <div class="container container--narrow">
+    <header class="page-head"><h1>Tu carrito</h1></header>
+    {%- if cart.item_count > 0 -%}
+      <form action="{{ routes.cart_url }}" method="post" class="cart">
+        <ul class="cart__items">
+          {%- for item in cart.items -%}
+            <li class="cart-item">
+              <a href="{{ item.url }}" class="cart-item__media">
+                {%- if item.image -%}{{ item.image | image_url: width: 200 | image_tag: loading: 'lazy', alt: item.title }}{%- endif -%}
+              </a>
+              <div class="cart-item__info">
+                <a href="{{ item.url }}" class="cart-item__title">{{ item.product.title }}</a>
+                {%- unless item.product.has_only_default_variant -%}<p class="muted">{{ item.variant.title }}</p>{%- endunless -%}
+                <p>{{ item.final_price | money }}</p>
+              </div>
+              <div class="cart-item__qty">
+                <label class="visually-hidden" for="Updates-{{ forloop.index }}">Cantidad</label>
+                <input id="Updates-{{ forloop.index }}" class="qty" type="number" name="updates[]" value="{{ item.quantity }}" min="0">
+                <a href="{{ item.url_to_remove }}" class="link muted">Eliminar</a>
+              </div>
+              <p class="cart-item__total">{{ item.final_line_price | money }}</p>
+            </li>
+          {%- endfor -%}
+        </ul>
+
+        <div class="cart__summary">
+          <label for="CartNote">Nota para tu pedido (opcional)</label>
+          <textarea id="CartNote" name="note" rows="2">{{ cart.note }}</textarea>
+          <p class="cart__total">Total: <strong>{{ cart.total_price | money_with_currency }}</strong></p>
+          <p class="muted">Impuestos incluidos. {{ settings.free_shipping_text }}.</p>
+          <div class="cart__actions">
+            <button type="submit" name="update" class="button button--ghost">Actualizar</button>
+            <button type="submit" name="checkout" class="button">Finalizar compra</button>
+          </div>
+        </div>
+      </form>
+    {%- else -%}
+      <div class="center">
+        <p>Tu carrito está vacío 🍼</p>
+        <a class="button" href="{{ routes.all_products_collection_url }}">Ver productos</a>
+      </div>
+    {%- endif -%}
+  </div>
+</section>
+
+{% schema %}
+{ "name": "Carrito" }
+{% endschema %}
