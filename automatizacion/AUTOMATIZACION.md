@@ -7,7 +7,7 @@ El código `SU00111427` es de tu proveedor. Conecta su app o integración con Sh
 
 | Si tu proveedor es… | Haz esto |
 |---|---|
-| **Dropi** (Colombia/LatAm) | En Dropi: *Integraciones → Shopify*, conecta la tienda y vincula cada producto por SKU (el SKU de la Abejita ya es `SU00111427`). Los pedidos, incluidos los de pago contra entrega, pasan solos a Dropi, y la guía vuelve a Shopify. |
+| **Dropi** (LatAm) | En Dropi: *Integraciones → Shopify*, conecta la tienda y vincula cada producto por SKU (el SKU de la Abejita ya es `SU00111427`). Los pedidos, incluidos los de pago contra entrega, pasan solos a Dropi, y la guía vuelve a Shopify. |
 | **AliExpress / CJ / otro** | Usa la app oficial (DSers, CJdropshipping, etc.). Mapea el producto por SKU y activa *Auto-order* y *Sincronización de seguimiento*. |
 
 ✅ Mantén el SKU de Shopify **igual** al código del proveedor. Así el mapeo es automático.
@@ -42,7 +42,7 @@ Instala **Judge.me** (plan gratis). Envía automáticamente la solicitud de rese
 - Para agregar productos nuevos, edita `productos/catalogo.json` y ejecuta *Actions → Desplegar tienda Shopify → Run workflow* con “setup_catalogo” activado. También puedes ejecutar `python3 scripts/tienda.py setup` en local.
   ⚠️ Ese paso **reemplaza** con lo que dice `catalogo.json` los productos que ya existen con el mismo handle. Haz los cambios de catálogo en el JSON, no en el panel de Shopify.
 
-## 7. Checklist legal (Colombia)
-- *Configuración → Políticas:* genera Reembolso, Privacidad y Términos. Revisa que coincidan con `contenido/paginas/cambios.html`, que incluye el derecho de retracto de 5 días hábiles.
-- No uses precios “antes/ahora” inventados: la SIC sanciona los descuentos falsos. Por eso el catálogo no trae “precio de comparación”.
+## 7. Checklist legal (Costa Rica)
+- *Configuración → Políticas:* genera Reembolso, Privacidad y Términos. Revisa que coincidan con `contenido/paginas/cambios.html`, que incluye el derecho de retracto de 8 días hábiles (Ley 7472).
+- No uses precios “antes/ahora” inventados: el MEIC puede sancionar la publicidad engañosa. Por eso el catálogo no trae “precio de comparación”.
 - En productos de seguridad infantil, evita prometer “evita el 100 % de las lesiones”. El texto del producto ya aclara que no reemplaza la supervisión de un adulto.

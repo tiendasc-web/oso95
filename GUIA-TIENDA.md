@@ -17,7 +17,7 @@ Todo lo necesario para lanzar la tienda está en este repositorio:
 
 **Protector de Cabeza para Bebé Abejita – Mochila Anticaídas**
 - SKU / código de proveedor: `SU00111427`
-- Precio sugerido: **$64.900 COP** (la competencia en Mercado Libre, Falabella y Éxito vende entre $42.000 y $55.000; con envío gratis y pago contra entrega, $64.900 deja margen y sigue siendo competitivo).
+- Precio sugerido: **₡12.900** (tienda en colones, Costa Rica). Ajústalo según tu costo del proveedor y el envío.
 - Etiquetas: `seguridad`, `primeros-pasos`, `mas-vendidos`. Aparece solo en esas colecciones.
 
 Los otros 11 productos son **complementos que se venden junto al protector** (otras figuras del protector, rodilleras, casco, arnés, seguros de hogar, sueño y alimentación). Se crean como **borrador** con SKU `PENDIENTE-...`. Para activar cada uno:
@@ -54,7 +54,7 @@ Los otros 11 productos son **complementos que se venden junto al protector** (ot
    - (Opcional) Variable `SHOPIFY_THEME_ID` = ID del tema publicado, para que cada cambio en `theme/` se suba directo a la tienda en vivo.
 
 ### Ajustes finales en el editor de temas
-- **Configuración del tema → Contacto y ventas:** tu número de WhatsApp, con indicativo (`57…`).
+- **Configuración del tema → Contacto y ventas:** tu número de WhatsApp, con indicativo (`506…`).
 - **Redes sociales:** tus enlaces de Instagram, Facebook y TikTok.
 - **Encabezado:** sube tu logo (si no lo haces, se muestra “🐝 nombre de la tienda”).
 - **Testimonios:** reemplaza los textos de ejemplo por reseñas **reales** de tus clientes.

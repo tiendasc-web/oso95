@@ -6,23 +6,37 @@
       "handle": "protector-cabeza-bebe-abejita",
       "title": "Protector de Cabeza para Bebé Abejita – Mochila Anticaídas",
       "type": "Protector de cabeza",
-      "tags": ["seguridad", "primeros-pasos", "mas-vendidos", "estrella"],
+      "tags": [
+        "seguridad",
+        "primeros-pasos",
+        "mas-vendidos",
+        "estrella"
+      ],
       "status": "active",
-      "price": "64900",
+      "price": "12900",
       "sku": "SU00111427",
       "grams": 250,
-      "images": [{ "file": "protector-cabeza-abejita-mariposa.jpg", "alt": "Protector de cabeza para bebé en forma de abejita rosada con alas lilas" }],
+      "images": [
+        {
+          "file": "protector-cabeza-abejita-mariposa.jpg",
+          "alt": "Protector de cabeza para bebé en forma de abejita rosada con alas lilas"
+        }
+      ],
       "seo_title": "Protector de Cabeza para Bebé Abejita | Pasito Feliz",
-      "seo_description": "Mochila protectora anticaídas para bebé: cojín suave y transpirable que amortigua golpes en cabeza y espalda. Envío gratis y pago contra entrega.",
+      "seo_description": "Mochila protectora anticaídas para bebé: cojín suave y transpirable que amortigua golpes en cabeza y espalda. Envíos a toda Costa Rica y pago contra entrega.",
       "body": "<p><strong>Cada caída, un poquito más suave.</strong> Nuestra Abejita acompaña a tu bebé mientras aprende a sentarse, gatear y dar sus primeros pasos, amortiguando los golpes en la cabeza y la espalda.</p><ul><li>🐝 <strong>Cojín acolchado en forma de dona</strong> que protege la parte posterior de la cabeza.</li><li>🦋 <strong>Alitas acolchadas</strong> que cubren la espalda baja.</li><li>🌬️ <strong>Malla 3D transpirable</strong>: ligera y fresca, ideal para clima cálido.</li><li>🎒 <strong>Correas elásticas ajustables</strong> que se ponen como una mochila.</li><li>🧼 <strong>Fácil de lavar</strong> a mano.</li></ul><p><strong>Edad recomendada:</strong> 4 a 24 meses.</p><p><strong>Incluye:</strong> 1 protector de cabeza con correas.</p><p><em>Este accesorio amortigua impactos, pero no reemplaza la supervisión de un adulto.</em></p>"
     },
     {
       "handle": "protector-cabeza-bebe-osito",
       "title": "Protector de Cabeza para Bebé Osito",
       "type": "Protector de cabeza",
-      "tags": ["seguridad", "primeros-pasos", "mas-vendidos"],
+      "tags": [
+        "seguridad",
+        "primeros-pasos",
+        "mas-vendidos"
+      ],
       "status": "draft",
-      "price": "64900",
+      "price": "12900",
       "sku": "PENDIENTE-OSITO",
       "grams": 250,
       "images": [],
@@ -32,9 +46,12 @@
       "handle": "protector-cabeza-bebe-mariquita",
       "title": "Protector de Cabeza para Bebé Mariquita",
       "type": "Protector de cabeza",
-      "tags": ["seguridad", "primeros-pasos"],
+      "tags": [
+        "seguridad",
+        "primeros-pasos"
+      ],
       "status": "draft",
-      "price": "64900",
+      "price": "12900",
       "sku": "PENDIENTE-MARIQUITA",
       "grams": 250,
       "images": [],
@@ -44,9 +61,13 @@
       "handle": "rodilleras-gateo-bebe",
       "title": "Rodilleras Antideslizantes para Gateo (Pack x3)",
       "type": "Rodilleras",
-      "tags": ["seguridad", "primeros-pasos", "mas-vendidos"],
+      "tags": [
+        "seguridad",
+        "primeros-pasos",
+        "mas-vendidos"
+      ],
       "status": "draft",
-      "price": "34900",
+      "price": "6900",
       "sku": "PENDIENTE-RODILLERAS",
       "grams": 80,
       "images": [],
@@ -56,9 +77,12 @@
       "handle": "casco-antigolpes-bebe",
       "title": "Casco Antigolpes Ajustable para Bebé",
       "type": "Casco",
-      "tags": ["seguridad", "primeros-pasos"],
+      "tags": [
+        "seguridad",
+        "primeros-pasos"
+      ],
       "status": "draft",
-      "price": "49900",
+      "price": "9900",
       "sku": "PENDIENTE-CASCO",
       "grams": 150,
       "images": [],
@@ -68,9 +92,11 @@
       "handle": "arnes-caminador-bebe",
       "title": "Arnés Caminador para Bebé",
       "type": "Arnés caminador",
-      "tags": ["primeros-pasos"],
+      "tags": [
+        "primeros-pasos"
+      ],
       "status": "draft",
-      "price": "54900",
+      "price": "10900",
       "sku": "PENDIENTE-ARNES",
       "grams": 300,
       "images": [],
@@ -80,9 +106,11 @@
       "handle": "protectores-esquinas-silicona",
       "title": "Protectores de Esquinas de Silicona (Pack x8)",
       "type": "Seguridad hogar",
-      "tags": ["seguridad"],
+      "tags": [
+        "seguridad"
+      ],
       "status": "draft",
-      "price": "24900",
+      "price": "4900",
       "sku": "PENDIENTE-ESQUINAS",
       "grams": 100,
       "images": [],
@@ -92,9 +120,11 @@
       "handle": "seguros-cajones-bebe",
       "title": "Seguros para Cajones y Gabinetes (Pack x10)",
       "type": "Seguridad hogar",
-      "tags": ["seguridad"],
+      "tags": [
+        "seguridad"
+      ],
       "status": "draft",
-      "price": "29900",
+      "price": "5900",
       "sku": "PENDIENTE-SEGUROS",
       "grams": 120,
       "images": [],
@@ -104,9 +134,12 @@
       "handle": "lampara-proyector-estrellas-bebe",
       "title": "Lámpara Proyector de Estrellas con Música",
       "type": "Lámpara",
-      "tags": ["hora-de-dormir", "mas-vendidos"],
+      "tags": [
+        "hora-de-dormir",
+        "mas-vendidos"
+      ],
       "status": "draft",
-      "price": "69900",
+      "price": "13900",
       "sku": "PENDIENTE-LAMPARA",
       "grams": 400,
       "images": [],
@@ -116,9 +149,11 @@
       "handle": "saco-dormir-bebe",
       "title": "Saco de Dormir de Algodón para Bebé",
       "type": "Saco de dormir",
-      "tags": ["hora-de-dormir"],
+      "tags": [
+        "hora-de-dormir"
+      ],
       "status": "draft",
-      "price": "59900",
+      "price": "11900",
       "sku": "PENDIENTE-SACO",
       "grams": 300,
       "images": [],
@@ -128,9 +163,12 @@
       "handle": "set-vajilla-silicona-bebe",
       "title": "Set de Alimentación de Silicona con Ventosa",
       "type": "Alimentación",
-      "tags": ["alimentacion", "mas-vendidos"],
+      "tags": [
+        "alimentacion",
+        "mas-vendidos"
+      ],
       "status": "draft",
-      "price": "54900",
+      "price": "10900",
       "sku": "PENDIENTE-VAJILLA",
       "grams": 450,
       "images": [],
@@ -140,9 +178,11 @@
       "handle": "babero-silicona-bebe",
       "title": "Babero de Silicona con Bolsillo",
       "type": "Alimentación",
-      "tags": ["alimentacion"],
+      "tags": [
+        "alimentacion"
+      ],
       "status": "draft",
-      "price": "24900",
+      "price": "4900",
       "sku": "PENDIENTE-BABERO",
       "grams": 90,
       "images": [],
@@ -150,19 +190,64 @@
     }
   ],
   "collections": [
-    { "handle": "mas-vendidos", "title": "Lo más vendido", "tag": "mas-vendidos", "description": "Los favoritos de las familias Pasito Feliz." },
-    { "handle": "seguridad-bebe", "title": "Seguridad", "tag": "seguridad", "description": "Protección suave para cada etapa de exploración." },
-    { "handle": "primeros-pasos", "title": "Primeros pasos", "tag": "primeros-pasos", "description": "Todo lo que necesitas cuando tu bebé empieza a gatear y caminar." },
-    { "handle": "hora-de-dormir", "title": "Hora de dormir", "tag": "hora-de-dormir", "description": "Noches tranquilas para el bebé (y para ti)." },
-    { "handle": "alimentacion", "title": "Alimentación", "tag": "alimentacion", "description": "Accesorios prácticos para la alimentación complementaria." }
+    {
+      "handle": "mas-vendidos",
+      "title": "Lo más vendido",
+      "tag": "mas-vendidos",
+      "description": "Los favoritos de las familias Pasito Feliz."
+    },
+    {
+      "handle": "seguridad-bebe",
+      "title": "Seguridad",
+      "tag": "seguridad",
+      "description": "Protección suave para cada etapa de exploración."
+    },
+    {
+      "handle": "primeros-pasos",
+      "title": "Primeros pasos",
+      "tag": "primeros-pasos",
+      "description": "Todo lo que necesitas cuando tu bebé empieza a gatear y caminar."
+    },
+    {
+      "handle": "hora-de-dormir",
+      "title": "Hora de dormir",
+      "tag": "hora-de-dormir",
+      "description": "Noches tranquilas para el bebé (y para ti)."
+    },
+    {
+      "handle": "alimentacion",
+      "title": "Alimentación",
+      "tag": "alimentacion",
+      "description": "Accesorios prácticos para la alimentación complementaria."
+    }
   ],
   "pages": [
-    { "handle": "nosotros", "title": "Nuestra historia", "file": "nosotros.html" },
-    { "handle": "envios", "title": "Envíos y pago contra entrega", "file": "envios.html" },
-    { "handle": "cambios-y-devoluciones", "title": "Cambios y devoluciones", "file": "cambios.html" },
-    { "handle": "contacto", "title": "Contacto", "file": "contacto.html" }
+    {
+      "handle": "nosotros",
+      "title": "Nuestra historia",
+      "file": "nosotros.html"
+    },
+    {
+      "handle": "envios",
+      "title": "Envíos y pago contra entrega",
+      "file": "envios.html"
+    },
+    {
+      "handle": "cambios-y-devoluciones",
+      "title": "Cambios y devoluciones",
+      "file": "cambios.html"
+    },
+    {
+      "handle": "contacto",
+      "title": "Contacto",
+      "file": "contacto.html"
+    }
   ],
   "discounts": [
-    { "code": "BIENVENIDA10", "title": "Bienvenida 10%", "percentage": 0.10 }
+    {
+      "code": "BIENVENIDA10",
+      "title": "Bienvenida 10%",
+      "percentage": 0.1
+    }
   ]
 }

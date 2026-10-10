@@ -5,8 +5,8 @@
     "announcement": {
       "type": "announcement-bar",
       "blocks": {
-        "a1": { "type": "announcement", "settings": { "text": "🚚 Envío GRATIS a todo el país" } },
-        "a2": { "type": "announcement", "settings": { "text": "💵 Paga contra entrega al recibir tu pedido" } },
+        "a1": { "type": "announcement", "settings": { "text": "🚚 Envío GRATIS a toda Costa Rica" } },
+        "a2": { "type": "announcement", "settings": { "text": "💵 Paga contra entrega: efectivo o SINPE Móvil" } },
         "a3": { "type": "announcement", "settings": { "text": "🎁 10% OFF con el código BIENVENIDA10" } }
       },
       "block_order": ["a1", "a2", "a3"]

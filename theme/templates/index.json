@@ -19,8 +19,8 @@
       "blocks": {
         "b1": { "type": "benefit", "settings": { "icon": "shield", "title": "Pensado para su seguridad", "text": "Acolchado suave que amortigua golpes en cabeza y espalda durante sus primeras caídas." } },
         "b2": { "type": "benefit", "settings": { "icon": "feather", "title": "Ligero y transpirable", "text": "Malla 3D que deja circular el aire. Tu bebé ni siente que lo lleva puesto." } },
-        "b3": { "type": "benefit", "settings": { "icon": "cash", "title": "Paga al recibir", "text": "Pago contra entrega en todo el país. Compra sin riesgo." } },
-        "b4": { "type": "benefit", "settings": { "icon": "truck", "title": "Envío gratis", "text": "Recibe tu pedido en 2 a 5 días hábiles con seguimiento." } }
+        "b3": { "type": "benefit", "settings": { "icon": "cash", "title": "Paga al recibir", "text": "Paga contra entrega en efectivo o SINPE Móvil. Compra sin riesgo." } },
+        "b4": { "type": "benefit", "settings": { "icon": "truck", "title": "Envío gratis", "text": "Envío gratis a toda Costa Rica, con seguimiento." } }
       },
       "block_order": ["b1", "b2", "b3", "b4"]
     },
@@ -68,8 +68,8 @@
       "settings": { "heading": "Preguntas frecuentes" },
       "blocks": {
         "q1": { "type": "question", "settings": { "question": "¿Desde qué edad se puede usar el protector de cabeza?", "answer": "<p>Recomendado de 4 a 24 meses, cuando tu bebé empieza a sentarse, gatear y dar sus primeros pasos. Las correas son ajustables para acompañar su crecimiento.</p>" } },
-        "q2": { "type": "question", "settings": { "question": "¿Cómo pago?", "answer": "<p>Puedes pagar contra entrega en efectivo al recibir, o en línea con tarjeta, PSE o Nequi, según los medios habilitados.</p>" } },
-        "q3": { "type": "question", "settings": { "question": "¿Cuánto tarda el envío?", "answer": "<p>Entre 2 y 5 días hábiles en ciudades principales y hasta 8 días en otras zonas. Te enviamos el número de guía por WhatsApp y correo.</p>" } },
+        "q2": { "type": "question", "settings": { "question": "¿Cómo pago?", "answer": "<p>Puedes pagar contra entrega (efectivo o SINPE Móvil) al recibir, o en línea con tarjeta.</p>" } },
+        "q3": { "type": "question", "settings": { "question": "¿Cuánto tarda el envío?", "answer": "<p>De 1 a 3 días hábiles en la GAM y de 3 a 6 días en el resto del país. Te enviamos el número de guía por WhatsApp y correo.</p>" } },
         "q4": { "type": "question", "settings": { "question": "¿Se puede lavar?", "answer": "<p>Sí. Lava a mano con agua fría y jabón suave, y deja secar a la sombra.</p>" } },
         "q5": { "type": "question", "settings": { "question": "¿Puedo cambiar mi producto?", "answer": "<p>Tienes 30 días para cambios si el producto está sin usar y en su empaque original. Escríbenos por WhatsApp.</p>" } }
       },

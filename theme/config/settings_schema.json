@@ -28,10 +28,10 @@
   {
     "name": "Contacto y ventas",
     "settings": [
-      { "type": "text", "id": "whatsapp_number", "label": "Número de WhatsApp (con indicativo, sin +)", "info": "Ejemplo: 573001234567", "default": "573000000000" },
+      { "type": "text", "id": "whatsapp_number", "label": "Número de WhatsApp (con indicativo, sin +)", "info": "Ejemplo: 50688887777", "default": "50600000000" },
       { "type": "text", "id": "whatsapp_message", "label": "Mensaje inicial de WhatsApp", "default": "¡Hola Pasito Feliz! Quiero información sobre sus productos para bebé." },
       { "type": "checkbox", "id": "show_cod_badge", "label": "Mostrar 'Pago contra entrega'", "default": true },
-      { "type": "text", "id": "free_shipping_text", "label": "Texto de envío", "default": "Envío GRATIS a todo el país" }
+      { "type": "text", "id": "free_shipping_text", "label": "Texto de envío", "default": "Envío GRATIS a toda Costa Rica" }
     ]
   },
   {
