@@ -1,0 +1,51 @@
+[
+  {
+    "name": "theme_info",
+    "theme_name": "Pasito Feliz",
+    "theme_version": "1.0.0",
+    "theme_author": "Pasito Feliz",
+    "theme_documentation_url": "https://github.com/tiendasc-web/oso95",
+    "theme_support_url": "https://github.com/tiendasc-web/oso95"
+  },
+  {
+    "name": "Colores de marca",
+    "settings": [
+      { "type": "color", "id": "color_primary", "label": "Rosa principal", "default": "#F48FB1" },
+      { "type": "color", "id": "color_secondary", "label": "Lila", "default": "#9C7BD8" },
+      { "type": "color", "id": "color_background", "label": "Fondo", "default": "#FFF9F5" },
+      { "type": "color", "id": "color_soft", "label": "Fondo suave (secciones)", "default": "#FDEEF3" },
+      { "type": "color", "id": "color_text", "label": "Texto", "default": "#3B2A4A" },
+      { "type": "color", "id": "color_button_text", "label": "Texto de botones", "default": "#3B2A4A" }
+    ]
+  },
+  {
+    "name": "Tipografía",
+    "settings": [
+      { "type": "font_picker", "id": "font_heading", "label": "Títulos", "default": "nunito_sans_n8" },
+      { "type": "font_picker", "id": "font_body", "label": "Texto", "default": "nunito_sans_n4" }
+    ]
+  },
+  {
+    "name": "Contacto y ventas",
+    "settings": [
+      { "type": "text", "id": "whatsapp_number", "label": "Número de WhatsApp (con indicativo, sin +)", "info": "Ejemplo: 573001234567", "default": "573000000000" },
+      { "type": "text", "id": "whatsapp_message", "label": "Mensaje inicial de WhatsApp", "default": "¡Hola Pasito Feliz! Quiero información sobre sus productos para bebé." },
+      { "type": "checkbox", "id": "show_cod_badge", "label": "Mostrar 'Pago contra entrega'", "default": true },
+      { "type": "text", "id": "free_shipping_text", "label": "Texto de envío", "default": "Envío GRATIS a todo el país" }
+    ]
+  },
+  {
+    "name": "Redes sociales",
+    "settings": [
+      { "type": "text", "id": "social_instagram", "label": "Instagram URL" },
+      { "type": "text", "id": "social_facebook", "label": "Facebook URL" },
+      { "type": "text", "id": "social_tiktok", "label": "TikTok URL" }
+    ]
+  },
+  {
+    "name": "Favicon",
+    "settings": [
+      { "type": "image_picker", "id": "favicon", "label": "Favicon" }
+    ]
+  }
+]

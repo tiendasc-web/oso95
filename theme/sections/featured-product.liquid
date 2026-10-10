@@ -1,0 +1,27 @@
+<section class="section section--soft" id="destacado">
+  <div class="container">
+    {%- if section.settings.product != blank -%}
+      {% render 'product-info', product: section.settings.product, section: section, show_description: section.settings.show_description %}
+    {%- else -%}
+      <div class="product">
+        <div class="product__gallery">{{ 'product-1' | placeholder_svg_tag: 'placeholder' }}</div>
+        <div class="product__info">
+          <h2 class="product__title">Elige tu producto estrella</h2>
+          <p>Selecciona un producto en el editor de temas.</p>
+        </div>
+      </div>
+    {%- endif -%}
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Producto destacado",
+  "settings": [
+    { "type": "product", "id": "product", "label": "Producto" },
+    { "type": "text", "id": "eyebrow", "label": "Texto superior", "default": "⭐ El favorito de las mamás" },
+    { "type": "checkbox", "id": "show_description", "label": "Mostrar descripción", "default": false }
+  ],
+  "presets": [{ "name": "Producto destacado" }]
+}
+{% endschema %}

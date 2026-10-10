@@ -1,0 +1,16 @@
+{
+  "current": "Default",
+  "presets": {
+    "Default": {
+      "color_primary": "#F48FB1",
+      "color_secondary": "#9C7BD8",
+      "color_background": "#FFF9F5",
+      "color_soft": "#FDEEF3",
+      "color_text": "#3B2A4A",
+      "color_button_text": "#3B2A4A",
+      "font_heading": "nunito_sans_n8",
+      "font_body": "nunito_sans_n4",
+      "show_cod_badge": true
+    }
+  }
+}

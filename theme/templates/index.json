@@ -1,0 +1,80 @@
+{
+  "sections": {
+    "hero": {
+      "type": "hero",
+      "settings": {
+        "eyebrow": "Nuevo · Colección Primeros Pasos",
+        "heading": "Sus primeros pasos, siempre protegidos",
+        "text": "Protector de cabeza Abejita: un cojín suave y transpirable que amortigua las caídas mientras tu bebé aprende a sentarse, gatear y caminar.",
+        "image_url": "https://raw.githubusercontent.com/tiendasc-web/oso95/refs/heads/claude/tienda-bebes-shopify/productos/imagenes/protector-cabeza-abejita-mariposa.jpg",
+        "button_label": "Comprar ahora",
+        "button_link": "shopify://products/protector-cabeza-bebe-abejita",
+        "button2_label": "Ver todo para bebé",
+        "button2_link": "shopify://collections/all"
+      }
+    },
+    "benefits": {
+      "type": "benefits",
+      "settings": { "heading": "¿Por qué Pasito Feliz?" },
+      "blocks": {
+        "b1": { "type": "benefit", "settings": { "icon": "shield", "title": "Pensado para su seguridad", "text": "Acolchado suave que amortigua golpes en cabeza y espalda durante sus primeras caídas." } },
+        "b2": { "type": "benefit", "settings": { "icon": "feather", "title": "Ligero y transpirable", "text": "Malla 3D que deja circular el aire. Tu bebé ni siente que lo lleva puesto." } },
+        "b3": { "type": "benefit", "settings": { "icon": "cash", "title": "Paga al recibir", "text": "Pago contra entrega en todo el país. Compra sin riesgo." } },
+        "b4": { "type": "benefit", "settings": { "icon": "truck", "title": "Envío gratis", "text": "Recibe tu pedido en 2 a 5 días hábiles con seguimiento." } }
+      },
+      "block_order": ["b1", "b2", "b3", "b4"]
+    },
+    "featured": {
+      "type": "featured-product",
+      "settings": { "product": "protector-cabeza-bebe-abejita", "eyebrow": "⭐ El favorito de las mamás", "show_description": false }
+    },
+    "categories": {
+      "type": "collection-list",
+      "settings": { "heading": "Compra por categoría" },
+      "blocks": {
+        "c1": { "type": "collection", "settings": { "collection": "seguridad-bebe", "title": "Seguridad", "emoji": "🛡️" } },
+        "c2": { "type": "collection", "settings": { "collection": "primeros-pasos", "title": "Primeros pasos", "emoji": "👣" } },
+        "c3": { "type": "collection", "settings": { "collection": "hora-de-dormir", "title": "Hora de dormir", "emoji": "🌙" } },
+        "c4": { "type": "collection", "settings": { "collection": "alimentacion", "title": "Alimentación", "emoji": "🍼" } }
+      },
+      "block_order": ["c1", "c2", "c3", "c4"]
+    },
+    "bestsellers": {
+      "type": "featured-collection",
+      "settings": { "heading": "Lo más vendido", "collection": "mas-vendidos", "limit": 8 }
+    },
+    "story": {
+      "type": "rich-text",
+      "settings": {
+        "heading": "Hecho por papás, para papás",
+        "text": "<p>Sabemos lo que se siente ver a tu bebé tambalearse en sus primeros pasos. Por eso elegimos productos suaves, bonitos y prácticos que te dan tranquilidad mientras ellos exploran. Recuerda: ningún accesorio reemplaza tu supervisión, pero sí puede hacer cada caída más suave.</p>",
+        "button_label": "Conoce nuestra historia",
+        "button_link": "shopify://pages/nosotros",
+        "soft": false
+      }
+    },
+    "reviews": {
+      "type": "testimonials",
+      "settings": { "heading": "Lo que dicen las familias" },
+      "blocks": {
+        "t1": { "type": "testimonial", "settings": { "quote": "Reemplaza este texto con la reseña real de tu primer cliente.", "author": "Cliente verificado" } },
+        "t2": { "type": "testimonial", "settings": { "quote": "Reemplaza este texto con la reseña real de tu segundo cliente.", "author": "Cliente verificado" } },
+        "t3": { "type": "testimonial", "settings": { "quote": "Reemplaza este texto con la reseña real de tu tercer cliente.", "author": "Cliente verificado" } }
+      },
+      "block_order": ["t1", "t2", "t3"]
+    },
+    "faq": {
+      "type": "faq",
+      "settings": { "heading": "Preguntas frecuentes" },
+      "blocks": {
+        "q1": { "type": "question", "settings": { "question": "¿Desde qué edad se puede usar el protector de cabeza?", "answer": "<p>Recomendado de 4 a 24 meses, cuando tu bebé empieza a sentarse, gatear y dar sus primeros pasos. Las correas son ajustables para acompañar su crecimiento.</p>" } },
+        "q2": { "type": "question", "settings": { "question": "¿Cómo pago?", "answer": "<p>Puedes pagar contra entrega en efectivo al recibir, o en línea con tarjeta, PSE o Nequi, según los medios habilitados.</p>" } },
+        "q3": { "type": "question", "settings": { "question": "¿Cuánto tarda el envío?", "answer": "<p>Entre 2 y 5 días hábiles en ciudades principales y hasta 8 días en otras zonas. Te enviamos el número de guía por WhatsApp y correo.</p>" } },
+        "q4": { "type": "question", "settings": { "question": "¿Se puede lavar?", "answer": "<p>Sí. Lava a mano con agua fría y jabón suave, y deja secar a la sombra.</p>" } },
+        "q5": { "type": "question", "settings": { "question": "¿Puedo cambiar mi producto?", "answer": "<p>Tienes 30 días para cambios si el producto está sin usar y en su empaque original. Escríbenos por WhatsApp.</p>" } }
+      },
+      "block_order": ["q1", "q2", "q3", "q4", "q5"]
+    }
+  },
+  "order": ["hero", "benefits", "featured", "categories", "bestsellers", "story", "reviews", "faq"]
+}

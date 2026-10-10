@@ -1,0 +1,49 @@
+name: Desplegar tienda Shopify
+
+on:
+  push:
+    branches: [main]
+    paths: ["theme/**"]
+  workflow_dispatch:
+    inputs:
+      setup_catalogo:
+        description: "Crear/actualizar productos, colecciones, páginas, menús y cupones"
+        type: boolean
+        default: false
+
+jobs:
+  tema:
+    runs-on: ubuntu-latest
+    if: ${{ vars.SHOPIFY_STORE != '' }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: npm install -g @shopify/cli@latest
+      - name: Revisar tema
+        run: shopify theme check --path theme --fail-level error
+      - name: Subir tema
+        env:
+          SHOPIFY_CLI_THEME_TOKEN: ${{ secrets.SHOPIFY_CLI_THEME_TOKEN }}
+          SHOPIFY_FLAG_STORE: ${{ vars.SHOPIFY_STORE }}
+        run: |
+          if [ -n "${{ vars.SHOPIFY_THEME_ID }}" ]; then
+            shopify theme push --path theme --theme "${{ vars.SHOPIFY_THEME_ID }}" --allow-live --nodelete
+          else
+            shopify theme push --path theme --unpublished --theme "Pasito Feliz" --json
+          fi
+
+  catalogo:
+    runs-on: ubuntu-latest
+    if: ${{ vars.SHOPIFY_STORE != '' && inputs.setup_catalogo }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Sincronizar catálogo
+        env:
+          SHOPIFY_STORE: ${{ vars.SHOPIFY_STORE }}
+          SHOPIFY_ADMIN_TOKEN: ${{ secrets.SHOPIFY_ADMIN_TOKEN }}
+        run: python3 scripts/tienda.py setup

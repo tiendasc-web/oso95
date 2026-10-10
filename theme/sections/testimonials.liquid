@@ -1,0 +1,35 @@
+<section class="section">
+  <div class="container">
+    <h2 class="section__title">{{ section.settings.heading }}</h2>
+    <div class="testimonials">
+      {%- for block in section.blocks -%}
+        <figure class="testimonial" {{ block.shopify_attributes }}>
+          <p class="rating" aria-hidden="true">{%- for i in (1..5) -%}{% render 'icon', name: 'star' %}{%- endfor -%}</p>
+          <blockquote>“{{ block.settings.quote }}”</blockquote>
+          <figcaption>— {{ block.settings.author }}</figcaption>
+        </figure>
+      {%- endfor -%}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Testimonios",
+  "settings": [
+    { "type": "text", "id": "heading", "label": "Título", "default": "Lo que dicen las familias" }
+  ],
+  "max_blocks": 6,
+  "blocks": [
+    {
+      "type": "testimonial",
+      "name": "Testimonio",
+      "settings": [
+        { "type": "textarea", "id": "quote", "label": "Testimonio", "default": "Escribe aquí la reseña real de un cliente." },
+        { "type": "text", "id": "author", "label": "Autor", "default": "Nombre, ciudad" }
+      ]
+    }
+  ],
+  "presets": [{ "name": "Testimonios", "blocks": [{ "type": "testimonial" }, { "type": "testimonial" }, { "type": "testimonial" }] }]
+}
+{% endschema %}

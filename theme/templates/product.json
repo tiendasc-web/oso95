@@ -1,0 +1,17 @@
+{
+  "sections": {
+    "main": { "type": "main-product", "settings": {} },
+    "faq": {
+      "type": "faq",
+      "settings": { "heading": "Preguntas frecuentes" },
+      "blocks": {
+        "q1": { "type": "question", "settings": { "question": "¿Cómo pago?", "answer": "<p>Contra entrega en efectivo al recibir, o en línea con tarjeta, PSE o Nequi.</p>" } },
+        "q2": { "type": "question", "settings": { "question": "¿Cuánto tarda el envío?", "answer": "<p>Entre 2 y 5 días hábiles en ciudades principales. Te enviamos la guía por WhatsApp.</p>" } },
+        "q3": { "type": "question", "settings": { "question": "¿Tiene cambios?", "answer": "<p>Sí, 30 días para cambios con el producto sin usar.</p>" } }
+      },
+      "block_order": ["q1", "q2", "q3"]
+    },
+    "related": { "type": "featured-collection", "settings": { "heading": "También te puede gustar", "collection": "mas-vendidos", "limit": 4 } }
+  },
+  "order": ["main", "faq", "related"]
+}

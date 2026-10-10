@@ -1,0 +1,35 @@
+{%- assign collection = section.settings.collection -%}
+<section class="section">
+  <div class="container">
+    <div class="section__head">
+      <h2 class="section__title">{{ section.settings.heading }}</h2>
+      {%- if collection != blank -%}<a class="link" href="{{ collection.url }}">Ver todo →</a>{%- endif -%}
+    </div>
+    <div class="grid">
+      {%- if collection != blank and collection.products_count > 0 -%}
+        {%- for product in collection.products limit: section.settings.limit -%}
+          {% render 'product-card', product: product %}
+        {%- endfor -%}
+      {%- else -%}
+        {%- for i in (1..4) -%}
+          <article class="card">
+            <div class="card__media">{{ 'product-' | append: i | placeholder_svg_tag: 'placeholder' }}</div>
+            <div class="card__body"><h3 class="card__title">Producto de ejemplo</h3></div>
+          </article>
+        {%- endfor -%}
+      {%- endif -%}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Colección destacada",
+  "settings": [
+    { "type": "text", "id": "heading", "label": "Título", "default": "Lo más vendido" },
+    { "type": "collection", "id": "collection", "label": "Colección" },
+    { "type": "range", "id": "limit", "label": "Productos a mostrar", "min": 2, "max": 12, "step": 1, "default": 8 }
+  ],
+  "presets": [{ "name": "Colección destacada" }]
+}
+{% endschema %}

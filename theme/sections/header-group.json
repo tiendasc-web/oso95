@@ -1,0 +1,17 @@
+{
+  "type": "header",
+  "name": "Grupo de encabezado",
+  "sections": {
+    "announcement": {
+      "type": "announcement-bar",
+      "blocks": {
+        "a1": { "type": "announcement", "settings": { "text": "🚚 Envío GRATIS a todo el país" } },
+        "a2": { "type": "announcement", "settings": { "text": "💵 Paga contra entrega al recibir tu pedido" } },
+        "a3": { "type": "announcement", "settings": { "text": "🎁 10% OFF con el código BIENVENIDA10" } }
+      },
+      "block_order": ["a1", "a2", "a3"]
+    },
+    "header": { "type": "header", "settings": { "menu": "main-menu", "logo_width": 160 } }
+  },
+  "order": ["announcement", "header"]
+}

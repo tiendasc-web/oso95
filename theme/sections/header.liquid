@@ -1,0 +1,45 @@
+<header class="header" data-header>
+  <div class="container header__inner">
+    <button class="header__toggle" type="button" aria-label="Abrir menú" aria-expanded="false" data-menu-toggle>
+      {% render 'icon', name: 'menu' %}
+    </button>
+
+    <a href="{{ routes.root_url }}" class="header__logo">
+      {%- if section.settings.logo != blank -%}
+        {{ section.settings.logo | image_url: width: 360 | image_tag: alt: shop.name, width: section.settings.logo_width, height: nil, style: 'height:auto' }}
+      {%- else -%}
+        <span class="logo-text">
+          <span class="logo-text__mark" aria-hidden="true">🐝</span>
+          {{ shop.name }}
+        </span>
+      {%- endif -%}
+    </a>
+
+    <nav class="header__nav" aria-label="Principal" data-menu>
+      <ul>
+        {%- for link in section.settings.menu.links -%}
+          <li><a href="{{ link.url }}"{% if link.current %} aria-current="page"{% endif %}>{{ link.title }}</a></li>
+        {%- endfor -%}
+      </ul>
+    </nav>
+
+    <div class="header__icons">
+      <a href="{{ routes.search_url }}" class="header__icon" aria-label="Buscar">{% render 'icon', name: 'search' %}</a>
+      <a href="{{ routes.cart_url }}" class="header__icon header__cart" aria-label="Carrito">
+        {% render 'icon', name: 'cart' %}
+        <span class="cart-count" data-cart-count{% if cart.item_count == 0 %} hidden{% endif %}>{{ cart.item_count }}</span>
+      </a>
+    </div>
+  </div>
+</header>
+
+{% schema %}
+{
+  "name": "Encabezado",
+  "settings": [
+    { "type": "image_picker", "id": "logo", "label": "Logo" },
+    { "type": "range", "id": "logo_width", "label": "Ancho del logo", "min": 80, "max": 260, "step": 10, "unit": "px", "default": 160 },
+    { "type": "link_list", "id": "menu", "label": "Menú", "default": "main-menu" }
+  ]
+}
+{% endschema %}
