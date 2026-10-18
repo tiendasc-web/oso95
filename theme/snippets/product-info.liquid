@@ -30,10 +30,23 @@
   <div class="product__info">
     {%- if section.settings.eyebrow != blank -%}<p class="eyebrow">{{ section.settings.eyebrow }}</p>{%- endif -%}
     <h1 class="product__title">{{ product.title }}</h1>
-    <p class="rating" aria-label="Valoración 4.9 de 5">
-      {%- for i in (1..5) -%}{% render 'icon', name: 'star' %}{%- endfor -%}
-      <span>4.9 · Amado por mamás y papás</span>
-    </p>
+    {%- comment -%}
+      Solo se muestra con reseñas reales: apps como Judge.me o Product Reviews
+      guardan la valoración en los metacampos reviews.rating y reviews.rating_count.
+    {%- endcomment -%}
+    {%- assign rating = product.metafields.reviews.rating.value -%}
+    {%- assign rating_count = product.metafields.reviews.rating_count.value | default: 0 -%}
+    {%- if rating != blank and rating_count > 0 -%}
+      {%- assign rating_value = rating.rating | round: 1 -%}
+      {%- assign filled = rating.rating | round -%}
+      <p class="rating">
+        <span class="rating__stars" aria-hidden="true">
+          {%- for i in (1..5) -%}<span class="rating__star{% if i > filled %} rating__star--empty{% endif %}">{% render 'icon', name: 'star' %}</span>{%- endfor -%}
+        </span>
+        <span class="visually-hidden">Valoración {{ rating_value }} de 5.</span>
+        <span>{{ rating_value }} · {{ rating_count }} {% if rating_count == 1 %}reseña{% else %}reseñas{% endif %}</span>
+      </p>
+    {%- endif -%}
     <div data-price>{% render 'price', product: product %}</div>
 
     {%- form 'product', product, class: 'product-form', data-product-form: '' -%}

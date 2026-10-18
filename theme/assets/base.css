@@ -123,7 +123,10 @@ p{margin:0 0 1em}
 .product__thumb:hover{border-color:var(--c-primary)}
 .product__title{font-size:clamp(1.6rem,3vw,2.3rem)}
 .rating{display:flex;align-items:center;gap:2px;color:#f5b301;font-size:.9rem;margin-bottom:12px}
-.rating span{color:var(--c-text);margin-left:8px;opacity:.75}
+.rating__stars{display:inline-flex;gap:2px}
+.rating__star{display:inline-flex}
+.rating__star--empty{color:color-mix(in srgb,var(--c-text) 22%,#fff)}
+.rating > span:last-child{color:var(--c-text);margin-left:8px;opacity:.75}
 .option{border:0;padding:0;margin:20px 0 0}
 .option legend{font-weight:700;margin-bottom:8px}
 .option__values{display:flex;flex-wrap:wrap;gap:8px}

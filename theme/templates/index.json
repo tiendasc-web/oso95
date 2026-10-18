@@ -57,9 +57,9 @@
       "type": "testimonials",
       "settings": { "heading": "Lo que dicen las familias" },
       "blocks": {
-        "t1": { "type": "testimonial", "settings": { "quote": "Reemplaza este texto con la reseña real de tu primer cliente.", "author": "Cliente verificado" } },
-        "t2": { "type": "testimonial", "settings": { "quote": "Reemplaza este texto con la reseña real de tu segundo cliente.", "author": "Cliente verificado" } },
-        "t3": { "type": "testimonial", "settings": { "quote": "Reemplaza este texto con la reseña real de tu tercer cliente.", "author": "Cliente verificado" } }
+        "t1": { "type": "testimonial", "settings": { "quote": "Reemplaza este texto con la reseña real de tu primer cliente.", "author": "" } },
+        "t2": { "type": "testimonial", "settings": { "quote": "Reemplaza este texto con la reseña real de tu segundo cliente.", "author": "" } },
+        "t3": { "type": "testimonial", "settings": { "quote": "Reemplaza este texto con la reseña real de tu tercer cliente.", "author": "" } }
       },
       "block_order": ["t1", "t2", "t3"]
     },
