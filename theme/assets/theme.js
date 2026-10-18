@@ -39,6 +39,7 @@
     var variantsEl = form.querySelector('[data-variants]');
     var variants = variantsEl ? JSON.parse(variantsEl.textContent) : [];
     var mainImg = root.querySelector('[data-main-image]');
+    var canBuy = !button.disabled;
 
     // Thumbnails
     root.querySelectorAll('[data-thumb]').forEach(function (thumb) {
@@ -60,10 +61,19 @@
       var variant = variants.find(function (v) {
         return v.options.every(function (o, i) { return o === selected[i]; });
       });
-      if (!variant) return;
+      if (message) message.textContent = '';
+      if (!variant) {
+        // Combinación inexistente: no dejar que se agregue la variante anterior.
+        idInput.value = '';
+        canBuy = false;
+        button.disabled = true;
+        button.textContent = 'Combinación no disponible';
+        return;
+      }
       idInput.value = variant.id;
-      button.disabled = !variant.available;
-      button.textContent = variant.available ? 'Agregar al carrito' : 'Agotado';
+      canBuy = variant.available;
+      button.disabled = !canBuy;
+      button.textContent = canBuy ? 'Agregar al carrito' : 'Agotado';
       var priceEl = root.querySelector('.price__current');
       if (priceEl) priceEl.textContent = formatMoney(variant.price);
       if (variant.featured_image && mainImg) { mainImg.removeAttribute('srcset'); mainImg.src = variant.featured_image.src; }
@@ -77,6 +87,7 @@
     // AJAX add to cart
     form.addEventListener('submit', function (e) {
       e.preventDefault();
+      if (!canBuy || !idInput.value) return;
       button.disabled = true;
       fetch((window.Shopify && Shopify.routes ? Shopify.routes.root : '/') + 'cart/add.js', {
         method: 'POST',
@@ -93,7 +104,7 @@
           if (message) message.innerHTML = '¡Agregado al carrito! <a href="/cart">Ver carrito →</a>';
         })
         .catch(function () { if (message) message.textContent = 'No pudimos agregar el producto. Intenta de nuevo.'; })
-        .finally(function () { button.disabled = false; });
+        .finally(function () { button.disabled = !canBuy; });
     });
   });
 })();
